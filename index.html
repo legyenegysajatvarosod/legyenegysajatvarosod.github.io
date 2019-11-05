@@ -5,10 +5,12 @@
     <meta name="description" content="Legyen egy saját városod karácsonyra papírházak">
     <meta name="author" content="Miklos Marton">
     <meta name="keywords" content="papírház,papírházak,coca-cola,mcdonalds,McDonald's,Coca-Cola,karácsony,1997,karácsonyfadísz">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="favicon.ico">
    
     <title>Legyen egy saját egy városod karácsonyra - Papírházak 1997-ből</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
     <link href="css/editor.css" rel="stylesheet">
 
@@ -17,7 +19,26 @@
   </head>
 
   <body>
-
+    <div id="3d-dialog" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="3d-image-modal-body">
+                    <img id="3d-image" data-cw="true" data-speed="0" data-throwable="1.2" data-brake="0.2" data-responsive="true" style="max-width: 100%; max-height: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="4d-dialog">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            
+        </div>
+        </div>
+    </div>
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
@@ -68,6 +89,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="allomas/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="allomas/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="allomas/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="allomas">3D</a>
                     </div>
                   </div>
                 </div>
@@ -83,6 +105,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="altalanos_iskola/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="altalanos_iskola/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="altalanos_iskola/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="altalanos_iskola">3D</a>
                     </div>
                   </div>
                 </div>
@@ -111,6 +134,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="csaladi_haz/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="csaladi_haz/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="csaladi_haz/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="csaladi_haz">3D</a>
                     </div>
                   </div>
                 </div>
@@ -127,6 +151,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="etterem/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="etterem/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="etterem/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="etterem">3D</a>
                     </div>
                   </div>
                 </div>
@@ -142,6 +167,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="foter/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="foter/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="foter/baseplate.png">Térképrészlet</a>
+                      
                     </div>
                   </div>
                 </div>
@@ -171,6 +197,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="jegpalya/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="jegpalya/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="jegpalya/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="jegpalya">3D</a>
                     </div>
                   </div>
                 </div>
@@ -186,6 +213,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="kozert/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="kozert/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="kozert/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="kozert">3D</a>
                     </div>
                   </div>
                 </div>
@@ -201,6 +229,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="magas_lakohaz/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="magas_lakohaz/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="magas_lakohaz/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="magas_lakohaz">3D</a>
                     </div>
                   </div>
                 </div>
@@ -216,6 +245,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="mcdrive/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="mcdrive/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="mcdrive/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="mcdrive">3D</a>
                     </div>
                   </div>
                 </div>
@@ -231,6 +261,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="panzio/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="panzio/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="panzio/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="panzio">3D</a>
                     </div>
                   </div>
                 </div>
@@ -246,50 +277,7 @@
                       <a class="btn btn-sm btn-outline-secondary" href="paraszthaz/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="paraszthaz/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="paraszthaz/baseplate.png">Térképrészlet</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="varoshaza/cover_thumbnail.jpg">
-                <div class="card-body">
-                  <p class="card-text">Városháza</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a class="btn btn-sm btn-outline-secondary" href="foter/house.png">Scannelt ház</a>
-                      <a class="btn btn-sm btn-outline-secondary" href="foter/cover.png">Borító</a>
-                      <a class="btn btn-sm btn-outline-secondary" href="foter/baseplate.png">Térképrészlet</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="vasarcsarnok/cover_thumbnail.jpg">
-                <div class="card-body">
-                  <p class="card-text">Vásárcsarnok</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a class="btn btn-sm btn-outline-secondary" href="vasarcsarnok/house.png">Scannelt ház</a>
-                      <a class="btn btn-sm btn-outline-secondary" href="vasarcsarnok/cover.png">Borító</a>
-                      <a class="btn btn-sm btn-outline-secondary" href="vasarcsarnok/baseplate.png">Térképrészlet</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="jatekbolt/cover_thumbnail.jpg">
-                <div class="card-body">
-                  <p class="card-text">Villa</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a class="btn btn-sm btn-outline-secondary" href="villa/house.png">Scannelt ház</a>
-                      <a class="btn btn-sm btn-danger" href="mailto:martonmiklosqdev+colahazak[kukac]gmail{pont}com?subject=[Legyen saját városod karácsonyra]Villa talp">Megvan nekem a talpa!</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="paraszthaz">3D</a>
                     </div>
                   </div>
                 </div>
@@ -305,6 +293,53 @@
                       <a class="btn btn-sm btn-outline-secondary" href="posta/house.png">Scannelt ház</a>
                       <a class="btn btn-sm btn-outline-secondary" href="posta/cover.png">Borító</a>
                       <a class="btn btn-sm btn-outline-secondary" href="posta/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="posta">3D</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="varoshaza/cover_thumbnail.jpg">
+                <div class="card-body">
+                  <p class="card-text">Városháza</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="foter/house.png">Scannelt ház</a>
+                      <a class="btn btn-sm btn-outline-secondary" href="foter/cover.png">Borító</a>
+                      <a class="btn btn-sm btn-outline-secondary" href="foter/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="varoshaza">3D</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="vasarcsarnok/cover_thumbnail.jpg">
+                <div class="card-body">
+                  <p class="card-text">Vásárcsarnok</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="vasarcsarnok/house.png">Scannelt ház</a>
+                      <a class="btn btn-sm btn-outline-secondary" href="vasarcsarnok/cover.png">Borító</a>
+                      <a class="btn btn-sm btn-outline-secondary" href="vasarcsarnok/baseplate.png">Térképrészlet</a>
+                      <a class="btn btn-sm btn-outline-secondary 3d-button" data-house="vasarcsarnok">3D</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="jatekbolt/cover_thumbnail.jpg">
+                <div class="card-body">
+                  <p class="card-text">Villa</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a class="btn btn-sm btn-outline-secondary" href="villa/house.png">Scannelt ház</a>
+                      <a class="btn btn-sm btn-danger" href="mailto:martonmiklosqdev+colahazak[kukac]gmail{pont}com?subject=[Legyen saját városod karácsonyra]Villa talp">Megvan nekem a talpa!</a>
                     </div>
                   </div>
                 </div>
@@ -328,9 +363,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.4/holder.js"></script>
+    <script src="http://code.vostrel.cz/jquery.reel.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>

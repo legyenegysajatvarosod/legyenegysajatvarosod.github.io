@@ -37,3 +37,11 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 75%;
+    height: 75%;
+   max-width:1200px;
+  }
+}
