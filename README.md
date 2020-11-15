@@ -4,4 +4,4 @@
 
 
 Itt csak a nyers fájlokat találod a galériát itt tudod megtekinteni:
-[https://legyensajatvarosod.github.io/gallery](https://legyenegysajatvarosod.github.io/gallery)
+[https://legyensajatvarosod.github.io](https://legyenegysajatvarosod.github.io)
