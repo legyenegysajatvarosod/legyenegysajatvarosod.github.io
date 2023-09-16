@@ -3,5 +3,5 @@
 22 évvel később páran digitalizáltuk a megmaradt házikókat és közzétettük az interneten.
 
 
-Itt csak a nyers fájlokat találod a galériát itt tudod megtekinteni:
+Itt csak a nyers fájlokat találod, a galériát itt tudod megtekinteni:
 [https://legyensajatvarosod.github.io](https://legyenegysajatvarosod.github.io)
